@@ -1,12 +1,12 @@
 :root {
-  --bg-a: #fff6f9;
-  --bg-b: #fde8ef;
+  --bg-a: #f5f2eb;
+  --bg-b: #e7e1d4;
   --card: #ffffffcc;
-  --text: #4e2d3a;
-  --muted: #8b5f70;
-  --accent: #df4f7b;
-  --accent-dark: #c73d67;
-  --shadow: 0 14px 40px rgba(144, 63, 94, 0.2);
+  --text: #443a31;
+  --muted: #6f6357;
+  --accent: #7f8f74;
+  --accent-dark: #6c7b61;
+  --shadow: 0 14px 40px rgba(90, 77, 64, 0.2);
 }
 
 * {
@@ -158,8 +158,8 @@ body {
   transition: transform 450ms ease;
 }
 
-.envelope:hover .envelope__flap {
-  transform: rotateX(20deg);
+.envelope:active .envelope__flap {
+  transform: none;
 }
 
 .envelope__seal {
@@ -204,7 +204,7 @@ body {
 .success-overlay {
   position: fixed;
   inset: 0;
-  background: rgba(68, 23, 42, 0.4);
+  background: rgba(52, 44, 36, 0.35);
   display: grid;
   place-items: center;
   padding: 24px;
@@ -300,5 +300,11 @@ body {
   .card__title,
   .success-modal__title {
     font-size: clamp(1.7rem, 8vw, 2.2rem);
+  }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .envelope:hover .envelope__flap {
+    transform: rotateX(20deg);
   }
 }

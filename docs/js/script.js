@@ -7,15 +7,15 @@ const envelope3d = document.getElementById("envelope3d");
 const cardPs = document.getElementById("cardPs");
 
 const showNote = () => {
-  envelope3d.classList.add("flipped");
   successOverlay.classList.remove("success-overlay--hidden");
   successOverlay.setAttribute("aria-hidden", "false");
-  envelopeHint.textContent = "A message full of love for Mom";
 };
 
 const hideNote = () => {
   successOverlay.classList.add("success-overlay--hidden");
   successOverlay.setAttribute("aria-hidden", "true");
+  envelope3d?.classList.add("flipped");
+  envelopeHint.textContent = "Tap to read again";
   cardPs?.remove();
 };
 
